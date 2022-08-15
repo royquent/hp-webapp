@@ -10,12 +10,4 @@ h1 {
     max-width: 1600px;
     margin: auto;
     align-items: center;
-
-    :host >>> *{
-        width:100%;
-    }
-    
-    // > * {
-    //     width: 100%;
-    // }
 }

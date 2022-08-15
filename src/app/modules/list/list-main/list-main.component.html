@@ -1,0 +1,16 @@
+<div *ngIf="loaded">
+    <h2>Characters from {{name}}</h2>
+    <div class="cards-wrapper">
+        <div *ngFor="let char of charList" class="card">
+            <a [routerLink]="['/character', char.name]">
+                <div *ngIf="char.image" class="char-img" style="background-image:url('{{char.image}}')"></div>
+                <div *ngIf="!char.image && char.gender == 'male'"  class="char-img" style="background-image:url('assets/img/placeholder-he.svg'); "></div>
+                <div *ngIf="!char.image && char.gender == 'female'"  class="char-img" style="background-image:url('assets/img/placeholder-she.svg'); "></div>
+                <div class="char-name">
+                    <span>{{char.name}}</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+

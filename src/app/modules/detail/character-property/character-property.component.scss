@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    margin-left: 15px;
+
+    border-bottom: 1px solid #b2967d;
+}
+
+.prop-name {
+    display: flex;
+    width: 50%;
+    font-weight: 700;
+}
+
+.prop-value{
+    display: flex;
+    width: 50%;
+
+}

@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+$azure-x-11-web-color: #ecf8f8ff;
+$isabelline: #eee4e1ff;
+$almond: #e7d8c9ff;
+$desert-sand: #e6beaeff;
+$grullo: #b2967dff;
+ 
+
+@font-face {
+    font-family: 'Aboreto';
+    src: url('./assets/fonts/Aboreto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CrimsonText-Regular';
+    src: url('./assets/fonts/CrimsonText-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CrimsonText-Bold';
+    src: url('./assets/fonts/CrimsonText-Bold.ttf') format('truetype');
+}
+
+nav {
+    padding: 10px 20px;
+    border-bottom: 1px solid #e7d8c9;
+    background-color: #b2967d;
+
+}
+
+body {
+    background-color: #e7d8c9;
+    font-family: 'CrimsonText-Regular';
+    color: #b2967dff;
+
+}
+
+h1{
+    color: #ecf8f8;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+
+

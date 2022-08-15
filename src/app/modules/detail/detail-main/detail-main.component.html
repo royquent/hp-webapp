@@ -1,0 +1,34 @@
+<div *ngIf="character">
+    <h2>{{character.name}}</h2>
+    <div class="character-wrapper">
+        <div class="information">
+            <section>
+                <h3>Character</h3>
+                <app-character-property [property]="'Name'" [value]="character.name"></app-character-property>
+                <app-character-property [property]="'Date of birth'" [value]="character.dateOfBirth">
+                </app-character-property>
+                <app-character-property [property]="'Eye color'" [value]="character.eyeColour"></app-character-property>
+                <app-character-property [property]="'Hair color'" [value]="character.hairColour"></app-character-property>
+                <app-character-property [property]="'Patronus'" [value]="character.patronus"></app-character-property>
+                <app-character-property [property]="'House'" [value]="character.house"></app-character-property>
+            </section>
+            <section>
+                <h3>Actor</h3>
+                <app-character-property [property]="'Name'" [value]="character.actor"></app-character-property>
+            </section>
+
+
+        </div>
+        <div *ngIf="character.image" class="picture" style="background-image:url({{character.image}})">
+            <!-- style="background-image:url({{character.image}})" -->
+            <!-- <img src="{{character.image}}" /> -->
+        </div>
+        <div *ngIf="!character.image && character.gender === 'male'" class="picture"
+            style="background-image:url('assets/img/placeholder-he.svg');">
+        </div>
+        <div *ngIf="!character.image && character.gender === 'female'" class="picture"
+            style="background-image:url('assets/img/placeholder-she.svg');">
+        </div>
+    </div>
+
+</div>

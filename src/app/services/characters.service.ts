@@ -13,7 +13,7 @@ export class CharactersService {
   constructor(private http: HttpClient) { }
 
   callHtpHouseService(houseName: string): Observable<Array<any>> {
-    return this.http.get<Array<any>>(`http://hp-api.herokuapp.com/api/characters/house/${houseName}`);
+    return this.http.get<Array<any>>(`https://hp-api.herokuapp.com/api/characters/house/${houseName}`);
   }
 
   getCharList(houseName: string): void {

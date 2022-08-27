@@ -1,49 +1,27 @@
-<div class="houses">
+<div class="wrapper">
+    <div class="houses">
 
-    <div class="house" style="background-image: url('./assets/img/gryffindor.jpg')">
-        <a [routerLink]=" ['/house','gryffindor']">
-
-            <div class="detail">
-                <span>
-                    Gryffindor
-                </span>
-            </div>
-        </a>
-    </div>
-
-    <div class="house" style="background-image: url('./assets/img/slytherin.jpg')">
-
-        <a [routerLink]=" ['/house', 'slytherin']">
-            <div class="detail">
-                <span>
-                    Slytherin
-                </span>
-            </div>
-        </a>
-    </div>
-
-    <div class="house" style="background-image: url('./assets/img/ravenclaw.jpg')">
-
-        <a [routerLink]=" ['/house', 'ravenclaw']">
-
-            <div class="detail">
-                <span>
-                    Ravenclaw
-                </span>
-            </div>
-        </a>
-    </div>
-
-
-    <div class="house" style="background-image: url('./assets/img/hufflepuff.jpg')">
-        <a [routerLink]="['/house', 'hufflepuff']">
-
-            <div class="detail">
-                <span>
-                    Hufflepuff
-                </span>
-            </div>
-        </a>
-
+        <div class="house">
+            <a style="background-image: url('./assets/img/gryffindor.jpg')" [routerLink]=" ['/house','gryffindor']">
+            </a>
+        </div>
+    
+        <div class="house">
+    
+            <a style="background-image: url('./assets/img/slytherin.jpg')" [routerLink]=" ['/house', 'slytherin']">
+            </a>
+        </div>
+    
+        <div class="house" >
+    
+            <a style="background-image: url('./assets/img/ravenclaw.jpg')" [routerLink]=" ['/house', 'ravenclaw']">
+            </a>
+        </div>
+    
+    
+        <div class="house" >
+            <a style="background-image: url('./assets/img/hufflepuff.jpg')" [routerLink]="['/house', 'hufflepuff']"></a>
+    
+        </div>
     </div>
 </div>

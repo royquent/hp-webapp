@@ -19,15 +19,16 @@
 
 
         </div>
-        <div *ngIf="character.image" class="picture" style="background-image:url({{character.image}})">
-            <!-- style="background-image:url({{character.image}})" -->
-            <!-- <img src="{{character.image}}" /> -->
+        <div *ngIf="character.image" class="picture">
+            <img src="{{character.image}}" />
         </div>
-        <div *ngIf="!character.image && character.gender === 'male'" class="picture"
-            style="background-image:url('assets/img/placeholder-he.svg');">
+        <div *ngIf="!character.image && character.gender === 'male'" class="picture">
+            <img src="assets/img/placeholder-he.svg" />
+
         </div>
-        <div *ngIf="!character.image && character.gender === 'female'" class="picture"
-            style="background-image:url('assets/img/placeholder-she.svg');">
+        <div *ngIf="!character.image && character.gender === 'female'" class="picture">
+            <img src="assets/img/placeholder-she.svg" />
+
         </div>
     </div>
 

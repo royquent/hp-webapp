@@ -7,14 +7,13 @@
 .character-wrapper {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
     justify-content: space-evenly;
     margin: 10px 50px;
-    height: 80vh;
-    max-height: 1080px;
+
 
 
     .information {
-        width: calc(50% - 30px);
         margin: 15px;
 
         section {
@@ -23,13 +22,43 @@
     }
 
     .picture {
-        margin: 15px;
-        width: calc(50% - 30px);
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        background-position: top center;
-        // background-color:#ecf8f8;
 
+        // background-color:#ecf8f8;
         // border: 5px 5px 30px 5px solid white;
+        img {
+            margin: auto;
+            height: 500px;
+            display: block;
+            object-fit: cover;
+
+        }
     }
+}
+
+@media(min-width: 1000px) {
+    .character-wrapper {
+        height: 80vh;
+        max-height: 1080px;
+        flex-direction: row;
+
+        .information {
+            width: calc(50% - 30px);
+            margin: 15px;
+        }
+
+        .picture {
+            margin: 15px;
+            width: calc(50% - 30px);
+
+            img {
+                height: 80vh;
+                max-height: 1080px;
+                max-width: 100%;
+                object-fit: cover;
+
+            }
+
+        }
+    }
+
 }

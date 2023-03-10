@@ -1,6 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Base64Service } from 'src/app/services/base64.service';
 import { CharactersService } from 'src/app/services/characters.service';
 
 @Component({
@@ -15,7 +16,10 @@ export class ListMainComponent implements OnInit, OnDestroy {
   loaded = false;
   charList: any;
 
-  constructor(private charactersService: CharactersService, private route: ActivatedRoute) { }
+  constructor(
+    private base64Service: Base64Service,
+    private charactersService: CharactersService, 
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params
@@ -36,6 +40,10 @@ export class ListMainComponent implements OnInit, OnDestroy {
     if (this.sub) {
       this.sub.unsubscribe();
     }
+  }
+
+  base64EncodeName(name: string): string {
+    return this.base64Service.encode(name);
   }
 
 

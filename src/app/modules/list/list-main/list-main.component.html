@@ -2,7 +2,7 @@
     <h2>Characters from <span class="capitalize">{{name}}</span></h2>
     <div class="cards-wrapper">
         <div *ngFor="let char of charList" class="card">
-            <a [routerLink]="['/character', char.name]">
+            <a [routerLink]="['/character', base64EncodeName(char.name)]">
                 <div *ngIf="char.image" class="char-img" style="background-image:url('{{char.image}}')"></div>
                 <div *ngIf="!char.image && char.gender == 'male'"  class="char-img" style="background-image:url('assets/img/placeholder-he.svg'); "></div>
                 <div *ngIf="!char.image && char.gender == 'female'"  class="char-img" style="background-image:url('assets/img/placeholder-she.svg'); "></div>

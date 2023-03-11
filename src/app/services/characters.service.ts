@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { ICharacter } from '../models/character.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CharactersService {
 
-  private _charList: BehaviorSubject<Array<any>> = new BehaviorSubject(Array());
+  private _charList: BehaviorSubject<Array<ICharacter>> = new BehaviorSubject(Array());
   public readonly charList: Observable<Array<any>> = this._charList.asObservable();
 
   constructor(private http: HttpClient) { }

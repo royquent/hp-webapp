@@ -11,24 +11,24 @@
         <div class="title">
             <div *ngIf="character.image" class="char-img" style="background-image:url('{{character.image}}')"></div>
             <div *ngIf="!character.image && character.gender == 'male'" class="char-img"
-                style="background-image:url('assets/img/placeholder-he.svg'); "></div>
+                style="background-image:url('./assets/img/placeholder-he.svg'); "></div>
             <div *ngIf="!character.image && character.gender == 'female'" class="char-img"
-                style="background-image:url('assets/img/placeholder-she.svg'); "></div>
+                style="background-image:url('./assets/img/placeholder-she.svg'); "></div>
             <h2>{{character.name}}</h2>
         </div>
 
         <div class="summary">
             <div class="icons">
                 <app-rounded-icon
-                    [imgSrc]="(character.alive) ?'/assets/img/heartbeat.svg' : '/assets/img/risk-skull.svg'"
+                    [imgSrc]="(character.alive) ?'./assets/img/heartbeat.svg' : './assets/img/risk-skull.svg'"
                     [tooltipText]="(character.alive) ?'Alive' : 'Dead'"></app-rounded-icon>
-                <app-rounded-icon *ngIf="character.hogwartsStaff" [imgSrc]="'/assets/img/teacher.svg'"
+                <app-rounded-icon *ngIf="character.hogwartsStaff" [imgSrc]="'./assets/img/teacher.svg'"
                     [tooltipText]="'Hogwarts Staff'"></app-rounded-icon>
-                <app-rounded-icon *ngIf="character.hogwartsStudent" [imgSrc]="'/assets/img/graduation.svg'"
+                <app-rounded-icon *ngIf="character.hogwartsStudent" [imgSrc]="'./assets/img/graduation.svg'"
                     [tooltipText]="'Hogwarts Student'"></app-rounded-icon>
-                <app-rounded-icon *ngIf="character.gender === 'male'" [imgSrc]="'/assets/img/male-gender.svg'"
+                <app-rounded-icon *ngIf="character.gender === 'male'" [imgSrc]="'./assets/img/male-gender.svg'"
                     [tooltipText]="'Male'"></app-rounded-icon>
-                <app-rounded-icon *ngIf="character.gender === 'female'" [imgSrc]="'/assets/img/femenine.svg'"
+                <app-rounded-icon *ngIf="character.gender === 'female'" [imgSrc]="'./assets/img/femenine.svg'"
                     [tooltipText]="'Female'"></app-rounded-icon>
             </div>
 

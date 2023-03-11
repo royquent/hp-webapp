@@ -12,12 +12,12 @@ export class CharactersService {
 
   constructor(private http: HttpClient) { }
 
-  callHtpHouseService(houseName: string): Observable<Array<any>> {
+  callHttpHouseService(houseName: string): Observable<Array<any>> {
     return this.http.get<Array<any>>(`https://hp-api.onrender.com/api/characters/house/${houseName}`);
   }
 
   getCharList(houseName: string): void {
-    this.callHtpHouseService(houseName).subscribe( res  => {
+    this.callHttpHouseService(houseName).subscribe( res  => {
       this._charList.next(res);
     })
   }

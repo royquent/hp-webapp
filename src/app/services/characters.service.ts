@@ -9,7 +9,7 @@ import { ICharacter } from '../models/character.model';
 export class CharactersService {
 
   private _charList: BehaviorSubject<Array<ICharacter>> = new BehaviorSubject(Array());
-  public readonly charList: Observable<Array<any>> = this._charList.asObservable();
+  public readonly charList: Observable<Array<ICharacter>> = this._charList.asObservable();
 
   constructor(private http: HttpClient) { }
 

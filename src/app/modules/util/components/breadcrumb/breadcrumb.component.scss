@@ -1,0 +1,32 @@
+.breadcrumb {
+    padding: 10px 15px;
+    background-color: #e7d8c9;
+
+
+    .item {
+        a {
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .slash {
+            display: inline-block;
+            padding: 0px 5px;
+        }
+
+        &:last-of-type {
+            a {
+                cursor: text;
+                text-decoration: none;
+                color: #b2967dff;
+                font-weight: 500;
+
+            }
+
+            .slash {
+                display: none;
+            }
+        }
+    }
+}

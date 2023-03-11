@@ -1,0 +1,20 @@
+.line {
+    position: relative;
+    height: 6px;
+
+    &.gryffindor {
+        background: linear-gradient(to right, #740001 25%, #D3A625 25%, #D3A625 50%, #740001 50%, #740001 75%, #D3A625 75%);
+    }
+
+    &.slytherin {
+        background: linear-gradient(to right, #1A472A 25%, #AAAAAA 25%, #AAAAAA 50%, #1A472A 50%, #1A472A 75%, #AAAAAA 75%);
+    }
+
+    &.ravenclaw {
+        background: linear-gradient(to right, #0E1A40 25%, #946B2D 25%, #946B2D 50%, #0E1A40 50%, #0E1A40 75%, #946B2D 75%);
+    }
+
+    &.hufflepuff {
+        background: linear-gradient(to right, #ecb939 25%, #372e29 25%, #372e29 50%, #ecb939 50%, #ecb939 75%, #372e29 75%);
+    }
+}

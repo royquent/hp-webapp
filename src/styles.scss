@@ -35,10 +35,15 @@ nav {
 }
 
 body {
-    background-color: #e7d8c9;
+    background-color: #f3e9de;
     font-family: 'CrimsonText-Regular';
     color: #b2967dff;
 
+}
+
+.container {
+    max-width: 1600px;
+    margin: auto;
 }
 
 h1{
@@ -47,7 +52,6 @@ h1{
 
 h2 {
     margin-top: 10px;
-    margin-left: 30px;
 }
 
 h3 {
@@ -56,6 +60,14 @@ h3 {
 
 .capitalize {
     text-transform: capitalize;
+}
+
+a {
+    color: #b2967dff;
+
+    &:hover {
+        color: #a56f3d;
+    }
 }
 
 

@@ -16,6 +16,13 @@ export class ListMainComponent implements OnInit, OnDestroy {
   loaded = false;
   charList: any;
 
+  breadcrumbPath: any = [
+    {
+      label: 'Home',
+      route: ['/']
+    },
+  ];
+
   constructor(
     private base64Service: Base64Service,
     private charactersService: CharactersService, 
@@ -26,6 +33,10 @@ export class ListMainComponent implements OnInit, OnDestroy {
       .subscribe(params => {
         console.log(params); // { orderby: "price" }
         this.name = params['name'];
+        this.breadcrumbPath.push({
+          label: this.name[0].toUpperCase() + this.name.slice(1),
+          route: null
+        });
 
         this.charactersService.getCharList(this.name);
         this.sub = this.charactersService.charList.subscribe(res => {

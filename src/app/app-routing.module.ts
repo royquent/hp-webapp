@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CharacterListResolver } from './resolvers/character-list.resolver';
 
 const routes: Routes = [
   { 
@@ -8,7 +9,8 @@ const routes: Routes = [
   },
   {
     path: "house/:name",
-    loadChildren: () => import('./modules/list/list.module').then(m => m.ListModule)
+    loadChildren: () => import('./modules/list/list.module').then(m => m.ListModule),
+    resolve: { characters: CharacterListResolver }
   },
   {
     path: "character/:name",

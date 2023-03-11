@@ -17,9 +17,7 @@ export class CharactersService {
     return this.http.get<Array<any>>(`https://hp-api.onrender.com/api/characters/house/${houseName}`);
   }
 
-  getCharList(houseName: string): void {
-    this.callHttpHouseService(houseName).subscribe( res  => {
-      this._charList.next(res);
-    })
+  set setCharList(charList: Array<ICharacter>) {
+    this._charList.next(charList);
   }
 }

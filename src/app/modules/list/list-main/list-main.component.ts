@@ -25,25 +25,19 @@ export class ListMainComponent implements OnInit, OnDestroy {
 
   constructor(
     private base64Service: Base64Service,
-    private charactersService: CharactersService, 
+    private charactersService: CharactersService,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.charList = this.route.snapshot.data['characters'];
+    this.charactersService.setCharList = this.charList;
     this.route.params
       .subscribe(params => {
-        console.log(params); // { orderby: "price" }
         this.name = params['name'];
         this.breadcrumbPath.push({
           label: this.name[0].toUpperCase() + this.name.slice(1),
           route: null
         });
-
-        this.charactersService.getCharList(this.name);
-        this.sub = this.charactersService.charList.subscribe(res => {
-          this.charList = res;
-          this.loaded = true;
-        })
-
       });
   }
 

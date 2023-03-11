@@ -1,7 +1,7 @@
 <div>
     <app-breadcrumb [path]="breadcrumbPath"></app-breadcrumb>
 </div>
-<div *ngIf="loaded">
+<div>
     <h2>Characters from <span class="capitalize">{{name}}</span></h2>
     <div class="cards-wrapper">
         <div *ngFor="let char of charList" class="card">

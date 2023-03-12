@@ -1,29 +1,40 @@
 <div class="container">
     <div class="wrapper">
+        <h2>Choose a house</h2>
+
         <div class="houses">
 
-            <div class="house">
-                <a style="background-image: url('./assets/img/gryffindor.jpg')" [routerLink]=" ['/house','gryffindor']">
+            <div class="house gr" >
+                <a [routerLink]=" ['/house','gryffindor']">
+                    <div class="background"></div>
+                    <div class="texture"></div>
+                    <div class="logo"></div>
+                    <div class="text">Gryffindor</div>
+                </a>
+            </div>   
+            <div class="house sn" >
+                <a [routerLink]=" ['/house','slytherin']">
+                    <div class="background"></div>
+                    <div class="texture"></div>
+                    <div class="logo"></div>
+                    <div class="text">Slytherin</div>
                 </a>
             </div>
-
-            <div class="house">
-
-                <a style="background-image: url('./assets/img/slytherin.jpg')" [routerLink]=" ['/house', 'slytherin']">
+            <div class="house rw" >
+                <a [routerLink]=" ['/house','ravenclaw']">
+                    <div class="background"></div>
+                    <div class="texture"></div>
+                    <div class="logo"></div>
+                    <div class="text">Ravenclaw</div>
                 </a>
             </div>
-
-            <div class="house">
-
-                <a style="background-image: url('./assets/img/ravenclaw.jpg')" [routerLink]=" ['/house', 'ravenclaw']">
+            <div class="house hf" >
+                <a [routerLink]=" ['/house','hufflepuff']">
+                    <div class="background"></div>
+                    <div class="texture"></div>
+                    <div class="logo"></div>
+                    <div class="text">Hufflepuff</div>
                 </a>
-            </div>
-
-
-            <div class="house">
-                <a style="background-image: url('./assets/img/hufflepuff.jpg')"
-                    [routerLink]="['/house', 'hufflepuff']"></a>
-
             </div>
         </div>
     </div>

@@ -1,71 +1,186 @@
 .wrapper {
-    display: flex;
-    width: 100%;
     padding-top: 30px;
 
     .houses {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        width: 100%;
-        margin: 0px 10px;
-        height: 650px;
+        display: grid;
 
         .house {
-            a {
-                transition: transform 100ms ease-in-out;
-                display: block;
+            position: relative;
+            min-height: 100px;
+            margin: 10px;
+            padding: 30px 35px;
+            border-bottom: 5px solid;
+            border-image-slice: 1;
+
+            .background {
+                position: absolute;
                 width: 100%;
                 height: 100%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                border-radius: 15px 15px;
-                cursor: pointer;
-                transform: scale(0.95);
+                top: 0;
+                left: 0;
             }
 
-            &:hover {
-                a {
-                    transform: scale(1);
-                    transition: transform 100ms ease-in-out;
+            .texture {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-image: url('/assets/img/texture.png');
+                background-size: 100% auto;
+                opacity: 0.8;
+                background-repeat: no-repeat;
+                background-position: left;
+            }
+
+            .logo {
+                position: absolute;
+                width: calc(100% - 70px);
+                height: calc(100% - 20px);
+                top: 0px;
+                left: 0;
+                margin: 10px 35px;
+                display: flex;
+
+
+
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: auto 100%;
+                opacity: 0.4;
+
+            }
+
+            .text {
+                position: absolute;
+                width: calc(100% - 70px);
+                height: calc(100% - 20px);
+                top: 0px;
+                left: 0;
+                margin: 10px 35px;
+                display: flex;
+
+                text-transform: uppercase;
+                font-size: xx-large;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &.gr {
+                .background {
+                    background: rgb(116, 0, 1);
+                }
+
+                .logo {
+                    background-image: url('/assets/img/gr.png');
+                }
+
+                .text {
+                    color: #d3a625;
+                }
+
+                border-image-source: linear-gradient(90deg, #740001 0%, #d3a625 100%);
+
+            }
+
+            &.sn {
+                border-image-source: linear-gradient(90deg, #1a472a 0%, #aaaaaa 100%);
+
+                .background {
+                    background: rgb(26, 71, 42);
+                }
+
+                .logo {
+                    background-image: url('/assets/img/sn.png');
+                }
+
+                .text {
+                    color: #aaaaaa;
                 }
             }
 
-            display: flex;
-            align-items: flex-end;
-            flex: 100%;
-            width: 100%;
-            position: relative;
+            &.rw {
+                border-image-source: linear-gradient(90deg, #0e1a40 0%, #946b2d 100%);
+
+                .background {
+                    background: rgb(14, 26, 64);
+                }
+
+                .logo {
+                    background-image: url('/assets/img/rw.png');
+                }
+
+                .text {
+                    color: #946b2d;
+                }
+            }
+
+            &.hf {
+                border-image-source: linear-gradient(90deg, #ecb939 0%, #372e29 100%);
+
+                .background {
+                    background: rgb(236, 185, 57);
+                }
+
+                .logo {
+                    background-image: url('/assets/img/hf.png');
+                }
+
+                .text {
+                    color: #372e29;
+                }
+            }
         }
 
     }
 
-    @media all and (min-width: 800px) {
+    @media all and (min-width: 550px) {
 
         .houses {
-            flex-direction: row;
-            height: 80vh;
-            max-height: 1080px;
-
             .house {
-                flex: 1;
-                transition: flex 100ms ease-in-out;
+                min-height: 150px;
 
-                a {
-                    transition: transform 100ms ease-in-out;
+                .logo {
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    align-items: center;
                 }
 
-                &:hover {
-                    flex: 2;
-                    transition: flex 100ms ease-in-out;
+                .text {
+                    justify-content: right;
+                    opacity: 0.6;
+                }
 
-                    a {
-                        transform: scale(1);
-                        transition: transform 100ms ease-in-out;
+                &:nth-of-type(2n) {
+                    .logo {
+                        background-position: right;
+                    }
+                    .text{
+                        justify-content: left;
+                    }
+
+                } 
+                
+                &:hover {
+                    .logo {
+                        opacity: 1;
+                    }
+                    .text {
+                        opacity: 1;
                     }
                 }
+            }
+        }
+    }
 
+    @media all and (min-width: 1000px) {
+        
+        .houses {
+            grid-template-columns: 1fr 1fr;
+            
+            .house {
+                min-height: 160px;
             }
         }
     }

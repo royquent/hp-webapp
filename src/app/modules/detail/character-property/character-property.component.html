@@ -1,2 +1,2 @@
 <div class="prop-name">{{property}}</div>
-<div class="prop-value">{{value? value: 'N/A'}}</div>
+<div class="prop-value">{{value ? (value | capitalizeFirstLetter) : 'N/A'}}</div>

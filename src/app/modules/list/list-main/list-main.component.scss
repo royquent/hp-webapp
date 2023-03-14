@@ -22,9 +22,8 @@ h2 {
         position: relative;
 
         &:hover {
-            color: $theme-secondary-color;
-            background-color: $primary-text-color;
-
+            color: $primary-text-color;
+            background-color: lighten($theme-secondary-color, 10%);
         }
 
 

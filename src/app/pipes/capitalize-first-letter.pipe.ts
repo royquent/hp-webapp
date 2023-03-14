@@ -9,7 +9,8 @@ export class CapitalizeFirstLetterPipe implements PipeTransform {
     if (!value) {
       return '';
     }
-    return value.charAt(0).toUpperCase() + value.slice(1);
+    const val = new String(value);
+    return val.charAt(0).toUpperCase() + val.slice(1);
   }
 
 }

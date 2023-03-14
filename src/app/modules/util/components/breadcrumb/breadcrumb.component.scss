@@ -1,6 +1,8 @@
+@import 'colors';
+
 .breadcrumb {
-    padding: 10px 15px;
-    background-color: #e7d8c9;
+    padding: 10px 20px;
+    background-color: $theme-secondary-color;
 
 
     .item {
@@ -19,7 +21,7 @@
             a {
                 cursor: text;
                 text-decoration: none;
-                color: #b2967dff;
+                color: $primary-text-color;
                 font-weight: 500;
 
             }

@@ -1,3 +1,4 @@
+@import 'scss/colors';
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +6,7 @@
 }
 
 
-$azure-x-11-web-color: #ecf8f8ff;
-$isabelline: #eee4e1ff;
-$almond: #e7d8c9ff;
-$desert-sand: #e6beaeff;
-$grullo: #b2967dff;
- 
+
 
 @font-face {
     font-family: 'Aboreto';
@@ -29,16 +25,15 @@ $grullo: #b2967dff;
 
 nav {
     padding: 10px 20px;
-    border-bottom: 1px solid #e7d8c9;
-    background-color: #b2967d;
+    background-color: $theme-secondary-color;
 
 }
 
 body {
-    background-color: #f3e9de;
     font-family: 'CrimsonText-Regular';
-    color: #b2967dff;
-
+    color: $primary-text-color;
+    overflow-x: hidden;
+    background-color: $theme-primary-color;
 }
 
 .container {
@@ -46,8 +41,8 @@ body {
     margin: auto;
 }
 
-h1{
-    color: #ecf8f8;
+h1 {
+    color: $primary-text-color;
 }
 
 h2 {
@@ -63,12 +58,9 @@ h3 {
 }
 
 a {
-    color: #b2967dff;
+    color: $primary-text-color;
 
     &:hover {
-        color: #a56f3d;
+        color: $link-hover-color;
     }
 }
-
-
-

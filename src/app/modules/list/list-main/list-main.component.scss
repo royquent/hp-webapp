@@ -1,3 +1,5 @@
+@import 'colors';
+
 h2 {
     margin-left: 30px;
 }
@@ -9,53 +11,67 @@ h2 {
 
     .card {
         border-radius: 5rem;
-        display: inline-block;
+        display: flex;
         margin: 10px;
         font-weight: 600;
         padding: 15px 0px;
         font-size: 1.3rem;
-        background-color: #b2967dff;
+        background-color: $theme-secondary-color;
         width: 100%;
+        flex-direction: row;
+        position: relative;
 
         &:hover {
-            color: #b2967dff;
-            background-color: #ecf8f8;
-            a {
-                color: #b2967dff;
-            }
+            color: $theme-secondary-color;
+            background-color: $primary-text-color;
+
         }
 
-        a {
-            width: 100%;
-            height: 100%;
+
+        .char-img {
+            position: relative;
+            margin-left: 15px;
             display: flex;
-            color: #ecf8f8;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            width: 80px;
+            height: 80px;
+            min-width: 80px;
+            min-height: 80px;
+            background-size: 100% auto;
+            background-position: top center;
 
-            .char-img{
-                margin-left: 15px;
-                display: inline-block;
-                border-radius: 50%;
-                background-repeat: no-repeat;
-                width: 80px;
-                height: 80px;
-                background-color: #ecf8f8;
-                background-size: 100% auto;
-                background-position: top center;
+            &.gryffindor {
+                background-image: url('./../../../../assets/img/gr-uniform.png');
             }
 
-            .char-name {
-                margin-left: 15px;
-                line-height: 1;
-                height: 80px;
-                display: flex;                    
-                align-items: center;
+            &.slytherin {
+                background-image: url('./../../../../assets/img/sn-uniform.png');
+            }
 
+            &.ravenclaw {
+                background-image: url('./../../../../assets/img/rw-uniform.png');
+            }
 
-                span{
-                    vertical-align: middle;
-                }
+            &.hufflepuff {
+                background-image: url('./../../../../assets/img/hf-uniform.png');
             }
         }
+
+        .char-name {
+            margin: 0px 10px;
+            line-height: 1;
+            display: flex;
+            height: 80px;
+            align-items: center;
+
+
+            span {
+                vertical-align: middle;
+            }
+        }
+
+        // }
     }
 
     @media(min-width: 800px) {
@@ -63,16 +79,16 @@ h2 {
             width: calc(50% - 20px); // 4 cartes par ligne (24 = bordures gauche/droite + margin gauche/droite)
         }
     }
+
     @media(min-width: 1000px) {
         .card {
             width: calc(33% - 20px); // 4 cartes par ligne (24 = bordures gauche/droite + margin gauche/droite)
         }
     }
+
     @media(min-width: 1200px) {
         .card {
             width: calc(25% - 20px); // 4 cartes par ligne (24 = bordures gauche/droite + margin gauche/droite)
         }
     }
 }
-
-

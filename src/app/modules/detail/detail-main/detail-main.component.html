@@ -9,11 +9,9 @@
 
 
         <div class="title">
-            <div *ngIf="character.image" class="char-img" style="background-image:url('{{character.image}}')"></div>
-            <div *ngIf="!character.image && character.gender == 'male'" class="char-img"
-                style="background-image:url('./assets/img/placeholder-he.svg'); "></div>
-            <div *ngIf="!character.image && character.gender == 'female'" class="char-img"
-                style="background-image:url('./assets/img/placeholder-she.svg'); "></div>
+            <app-char-picture-house *ngIf="character.image" [image]="character.image" [house]="character.house"></app-char-picture-house>
+            <app-char-picture-house *ngIf="!character.image && character.gender == 'male'" [image]="'./assets/img/placeholder-he.svg'" [house]="character.house"></app-char-picture-house>
+            <app-char-picture-house *ngIf="!character.image && character.gender == 'female'" [image]="'./assets/img/placeholder-she.svg'" [house]="character.house"></app-char-picture-house>
             <h2>{{character.name}}</h2>
         </div>
 
@@ -30,6 +28,7 @@
                     [tooltipText]="'Male'"></app-rounded-icon>
                 <app-rounded-icon *ngIf="character.gender === 'female'" [imgSrc]="'./assets/img/femenine.svg'"
                     [tooltipText]="'Female'"></app-rounded-icon>
+                    
             </div>
 
             <!-- <div>Credits</div>

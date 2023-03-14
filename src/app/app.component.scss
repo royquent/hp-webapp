@@ -1,5 +1,18 @@
+@import 'colors';
+
 h1 {
     a {
-        color: #ecf8f8;
+        color: $primary-text-color;
     }
+}
+
+.bg {
+    min-height: 100%;
+    min-width: 1920px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }

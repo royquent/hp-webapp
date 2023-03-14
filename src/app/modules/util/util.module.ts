@@ -3,17 +3,20 @@ import { CommonModule } from '@angular/common';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { RouterModule } from '@angular/router';
 import { CapitalizeFirstLetterPipe } from 'src/app/pipes/capitalize-first-letter.pipe';
+import { ToLowerCasePipe } from 'src/app/pipes/to-lower-case.pipe';
 
 
 
 @NgModule({
   exports:[
     BreadcrumbComponent,
-    CapitalizeFirstLetterPipe
+    CapitalizeFirstLetterPipe,
+    ToLowerCasePipe
   ],
   declarations: [
     BreadcrumbComponent,
-    CapitalizeFirstLetterPipe
+    CapitalizeFirstLetterPipe,
+    ToLowerCasePipe
   ],
   imports: [
     RouterModule,

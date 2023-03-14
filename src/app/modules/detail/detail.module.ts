@@ -6,6 +6,7 @@ import { CharacterPropertyComponent } from './character-property/character-prope
 import { RoundedIconComponent } from './rounded-icon/rounded-icon.component';
 import { HouseColoredLineComponent } from './house-colored-line/house-colored-line.component';
 import { UtilModule } from '../util/util.module';
+import { CharPictureHouseComponent } from './char-picture-house/char-picture-house.component';
 
 const routes: Routes = [
   { path: "", component: DetailMainComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
     DetailMainComponent,
     CharacterPropertyComponent,
     RoundedIconComponent,
-    HouseColoredLineComponent
+    HouseColoredLineComponent,
+    CharPictureHouseComponent
   ],
   imports: [
     RouterModule.forChild(routes),

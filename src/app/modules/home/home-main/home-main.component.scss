@@ -1,5 +1,11 @@
+@import 'colors';
+
 .wrapper {
     padding-top: 30px;
+
+    h2 {
+        margin-left: 10px;
+    }
 
     .houses {
         display: grid;
@@ -7,9 +13,8 @@
         .house {
             position: relative;
             min-height: 100px;
-            margin: 10px;
+            margin: 5px 10px;
             padding: 30px 35px;
-            border-bottom: 5px solid;
             border-image-slice: 1;
 
             .background {
@@ -18,6 +23,7 @@
                 height: 100%;
                 top: 0;
                 left: 0;
+                border-radius: 10px;
             }
 
             .texture {
@@ -26,11 +32,12 @@
                 height: 100%;
                 top: 0;
                 left: 0;
-                background-image: url('./../../../../assets/img/texture.png');
-                background-size: 100% auto;
-                opacity: 0.8;
+                background-image: url('./../../../../assets/img/texture-mesh.png');
+                background-size: auto;
+                opacity: 0.7;
                 background-repeat: no-repeat;
                 background-position: left;
+                border-radius: 10px;
             }
 
             .logo {
@@ -61,39 +68,32 @@
                 display: flex;
 
                 text-transform: uppercase;
-                font-size: xx-large;
+                font-size: 2em;
                 align-items: center;
                 justify-content: center;
             }
 
             &.gr {
+                border-image-source: linear-gradient(90deg, $gryffindor-primary 0%, #d3a625 100%);
                 .background {
-                    background: rgb(116, 0, 1);
+                    background: $gryffindor-primary;
                 }
-
                 .logo {
                     background-image: url('./../../../../assets/img/gr.png');
                 }
-
                 .text {
                     color: #d3a625;
                 }
-
-                border-image-source: linear-gradient(90deg, #740001 0%, #d3a625 100%);
-
             }
 
             &.sn {
                 border-image-source: linear-gradient(90deg, #1a472a 0%, #aaaaaa 100%);
-
                 .background {
-                    background: rgb(26, 71, 42);
+                    background: #1a472a;
                 }
-
                 .logo {
                     background-image: url('./../../../../assets/img/sn.png');
                 }
-
                 .text {
                     color: #aaaaaa;
                 }
@@ -103,7 +103,7 @@
                 border-image-source: linear-gradient(90deg, #0e1a40 0%, #946b2d 100%);
 
                 .background {
-                    background: rgb(14, 26, 64);
+                    background: #0e1a40;
                 }
 
                 .logo {
@@ -119,7 +119,7 @@
                 border-image-source: linear-gradient(90deg, #ecb939 0%, #372e29 100%);
 
                 .background {
-                    background: rgb(236, 185, 57);
+                    background: #ecb939;
                 }
 
                 .logo {
@@ -138,13 +138,10 @@
 
         .houses {
             .house {
-                min-height: 150px;
+                min-height: 130px;
 
                 .logo {
-                    background-size: contain;
-                    background-repeat: no-repeat;
                     background-position: left;
-                    align-items: center;
                 }
 
                 .text {
@@ -168,19 +165,22 @@
                     }
                     .text {
                         opacity: 1;
+                        font-weight: 700;
+                        font-size: 2.2em;
                     }
                 }
             }
         }
     }
 
-    @media all and (min-width: 1000px) {
+    @media all and (min-width: 1100px) {
         
         .houses {
             grid-template-columns: 1fr 1fr;
             
             .house {
                 min-height: 160px;
+                margin: 10px;
             }
         }
     }

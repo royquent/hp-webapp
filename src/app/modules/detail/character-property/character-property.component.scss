@@ -1,10 +1,12 @@
+@import 'colors';
+
 :host {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     font-size: 1.2rem;
     padding: 5px 0;
-    background-color: #e7d8c9;
+    background-color: $theme-secondary-color;
     margin: 8px 0px;
 }
 

@@ -12,7 +12,7 @@ import { CharactersService } from 'src/app/services/characters.service';
 export class ListMainComponent implements OnInit, OnDestroy {
 
   sub: Subscription = new Subscription();
-  name: string = '';
+  house: string = '';
   loaded = false;
   charList: any;
 
@@ -33,9 +33,9 @@ export class ListMainComponent implements OnInit, OnDestroy {
     this.charactersService.setCharList = this.charList;
     this.route.params
       .subscribe(params => {
-        this.name = params['name'];
+        this.house = params['house'];
         this.breadcrumbPath.push({
-          label: this.name[0].toUpperCase() + this.name.slice(1),
+          label: this.house[0].toUpperCase() + this.house.slice(1),
           route: null
         });
       });

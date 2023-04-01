@@ -2,15 +2,18 @@
     <app-breadcrumb [path]="breadcrumbPath"></app-breadcrumb>
 </div>
 <div>
-    <h2>Characters from <span class="capitalize">{{name}}</span></h2>
-    <div class="cards-wrapper">
-        <a class="card" *ngFor="let char of charList" [routerLink]="['/character', base64EncodeName(char.name)]">
+    <h2>Characters from <span class="capitalize">{{house}}</span></h2>
+    <div class="cards-wrapper" *ngIf="charList && charList.length; else noData">
+        <a class="card" *ngFor="let char of charList" [routerLink]="['/character', house.toLowerCase(), base64EncodeName(char.name)]">
                 <div *ngIf="char.image" class="char-img" style="background-image:url('{{char.image}}')"></div>
-                <div *ngIf="!char.image" class="char-img {{name | toLowerCase}}">
+                <div *ngIf="!char.image" class="char-img {{house | toLowerCase}}">
                 </div>
                 <div class="char-name">
                     <span>{{char.name}}</span>
                 </div>
         </a>
     </div>
+    <ng-template #noData>
+        <app-no-data [message]="'Oops... It looks like there\'s no one here.'"></app-no-data>
+    </ng-template>
 </div>

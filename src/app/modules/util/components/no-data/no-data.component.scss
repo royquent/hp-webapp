@@ -1,0 +1,18 @@
+@import 'colors';
+
+.no-data {
+
+    padding: 50px 30px;
+    text-align: center;
+    background-color: $theme-secondary-color;
+    margin: 30px;
+
+    img {
+        position: relative;
+        max-width: 100%;
+    }
+
+    h3 {
+        margin-top: 15px;
+    }
+}

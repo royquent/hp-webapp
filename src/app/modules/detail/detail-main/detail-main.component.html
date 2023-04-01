@@ -1,11 +1,11 @@
-<div *ngIf="character">
+<div>
     <div>
         <app-breadcrumb [path]="breadcrumbPath"></app-breadcrumb>
     </div>
     <div class="house-line">
-        <app-house-colored-line [houseName]="character.house"></app-house-colored-line>
+        <app-house-colored-line [houseName]="house"></app-house-colored-line>
     </div>
-    <div class="page">
+    <div class="page" *ngIf="character; else noData">
 
 
         <div class="title">
@@ -59,7 +59,7 @@
                     <app-character-property [property]="'Wood'" [value]="character.wand.wood"></app-character-property>
                     <app-character-property [property]="'Core'" [value]="character.wand.core"></app-character-property>
                     <app-character-property [property]="'Length'"
-                        [value]="character.wand.length"></app-character-property>
+                        [value]="toString(character.wand.length)"></app-character-property>
                 </section>
                 <section>
                     <h3>Actor</h3>
@@ -70,4 +70,7 @@
         </div>
 
     </div>
+    <ng-template #noData>
+        <app-no-data [message]="'Oops... It looks like we have no data'"></app-no-data>
+    </ng-template>
 </div>

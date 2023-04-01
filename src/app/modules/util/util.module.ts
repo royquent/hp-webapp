@@ -4,6 +4,7 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
 import { RouterModule } from '@angular/router';
 import { CapitalizeFirstLetterPipe } from 'src/app/pipes/capitalize-first-letter.pipe';
 import { ToLowerCasePipe } from 'src/app/pipes/to-lower-case.pipe';
+import { NoDataComponent } from './components/no-data/no-data.component';
 
 
 
@@ -11,12 +12,14 @@ import { ToLowerCasePipe } from 'src/app/pipes/to-lower-case.pipe';
   exports:[
     BreadcrumbComponent,
     CapitalizeFirstLetterPipe,
-    ToLowerCasePipe
+    ToLowerCasePipe,
+    NoDataComponent
   ],
   declarations: [
     BreadcrumbComponent,
     CapitalizeFirstLetterPipe,
-    ToLowerCasePipe
+    ToLowerCasePipe,
+    NoDataComponent
   ],
   imports: [
     RouterModule,

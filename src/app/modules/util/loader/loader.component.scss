@@ -1,0 +1,41 @@
+@import 'colors';
+
+.overlay {
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .spinner {
+        position: relative;
+        top: calc(50% - 40px);
+        left: calc(50% - 40px);
+        width: 80px;
+        height: 80px;
+    }
+
+    .spinner:before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 4px solid #ccc;
+        border-top-color: #1c87c9;
+        animation: spinner 0.8s linear infinite;
+    }
+
+    @keyframes spinner {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+}
